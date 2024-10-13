@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
 body {
     font-size: 1.2em;
     background-color: #8b8999;
@@ -60,11 +71,32 @@ h2, a {
     grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 700px) {
-    .navigation {
-        display: none;
-    }
+.hide {
+    display: none;
+}
 
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+}
+
+.close-viewer {
+    color: white;
+    grid-row: 1;
+}
+
+.viewer-image {
+    max-height: 100%;
+    grid-row: 2;
+}
+
+@media screen and (min-width: 700px) {
     .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -81,15 +113,4 @@ h2, a {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
-:root {
---primary-color: #52489c;
---secondary-color: #59c3c3;
---accent-color: #f45b69;
---text-dark: #333;
---text-light: #ebebeb;
---primary-font: Arial, Helvetica,sans-serif;
---secondary-font: Mooli, san-serif;
 }
